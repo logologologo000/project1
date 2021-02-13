@@ -19,11 +19,4 @@ Route::get('/about', [HomeController::class, 'about'] );
 Route::get('/contact', [HomeController::class, 'contact'] );
 
 
-Route::get('/{name}', function ($name) {
-    return "สวัสดี $name";
-});
 
-Route::get('/calculater/{num1}/{num2}', function ($num1, $num2) {
-
-    return ($num1+$num2);
-});
