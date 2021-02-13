@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    Laravel
+    Laravel <br><br>
+    <a href="/contact">contact</a>
 </body>
 </html>
