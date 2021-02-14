@@ -55,12 +55,14 @@ class UserController extends Controller
         $name = $request->input('name');
         $username = $request->input('username');
         $email = $request->input('email');
+        $p = $request->input('password');
 
         $users = User::find($id);
 
         $users->name = $name;
         $users->username = $username;
         $users->email = $email;
+        $users-> password = Hash::make($request->input('password'));
 
         $users->save();
         return redirect('user');
