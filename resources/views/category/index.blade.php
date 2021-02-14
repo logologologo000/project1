@@ -2,10 +2,10 @@
 @section('content')
 
 <h1>หมวดหมู่ข่าว</h1>
-
-<table style="background-color: rgb(229, 190, 190); ">
-    <thead>
-        <tr>
+<a href="/category/create"> + เพิ่มหมวดหมู่</a>
+<table style="background-color: rgb(229, 190, 190); " >
+    <thead  >
+        <tr >
             <td>ลำดับ</td>
             <td>ชื่อหมวดหมู่</td>
             <td>สร้างเมื่อ</td>
@@ -19,7 +19,7 @@
             <td>{{$item->id}}</td>
             <td>{{$item->name}}</td>
             <td>{{$item->created_at}}</td>
-            <td>oo</td>
+            <td>asd</td>
         </tr>
         @endforeach
     </tbody>
