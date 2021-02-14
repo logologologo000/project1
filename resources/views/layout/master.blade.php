@@ -8,7 +8,7 @@
 </head>
 <body>
     <a href="/category">Category</a> | <a href="/user">User</a> | <a href="/post">Post</a> <br><br>
-
+    สวัสดี , @if (auth()->check()) {{auth()->user()->name}} <a href="/auth/logout">ออกจากระบบ</a> @else สวัสดีบุคคลทั่วไป @endif
     @yield("content")
 
 

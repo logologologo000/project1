@@ -4,11 +4,18 @@
     <h1>กรุณากรอกข้อมูล</h1>
     <form action="/post/store" method="post">
         @csrf
-        Title :  <input type="text" name="title" required><br>
-        thumbnail : <input type="text" name="thumbnail" required ><br>
-        user_id : <input type="text" name="user_id" required ><br>
-        category_id : <input type="text" name="category_id" required><br>
-        detail : <input type="text" name="detail" required><br>
+        หัวข้อข่าว :  <input type="text" name="title" required><br>
+        รูปประจำข่าว : <input type="file" name="Thumebnail" required ><br>
+        หมวดหมู่ข่าว :
+        <select name="category_id" id="">
+            @foreach($category as $item)
+            <option value="">DB</option>
+            @endforeach
+        </select>
+        รายละเอียดข่าว :
+        <textarea name="detail" id="" cols="30" rows="10">
+
+        </textarea>
         <button type="submit">บันทึก</button>
 
     </form>
