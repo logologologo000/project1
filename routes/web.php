@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -60,7 +61,7 @@ Route::get('/post/delete/{id}', [PostController::class, 'delete']);
 
 /* auth */
 Route::get('/auth/login', [AuthController::class, 'login']);
-Route::get('/auth/dologin', [AuthController::class, 'dologin']);
+Route::post('/auth/dologin', [AuthController::class, 'doLogin']);
 Route::get('/auth/register', [AuthController::class, 'register']);
-Route::get('/auth/doregister', [AuthController::class, 'doregister']);
+Route::get('/auth/doregister', [AuthController::class, 'doRegister']);
 
