@@ -7,8 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-
-    <a href="/">Welcome</a> | <a href="/about">About</a> | <a href="/contact">Contact</a> <br><br>
+    <a href="/category">Category</a> | <a href="/user">User</a> | <a href="/post">Post</a> <br><br>
 
     @yield("content")
 
