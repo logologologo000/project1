@@ -62,7 +62,7 @@ Route::get('/post/delete/{id}', [PostController::class, 'delete']);
 
 /* auth */
 Route::get('/auth/login', [AuthController::class, 'login'])->name('login');
-Route::post('/auth/dologin', [AuthController::class, 'doLogin']);
+Route::post('/auth/doLogin', [AuthController::class, 'doLogin']);
 Route::get('/auth/register', [AuthController::class, 'register']);
 Route::get('/auth/doregister', [AuthController::class, 'doRegister']);
 Route::get('/auth/logout', [AuthController::class, 'logout']);

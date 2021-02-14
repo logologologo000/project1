@@ -2,7 +2,7 @@
 @section('content')
 
     <h1>กรุณากรอกข้อมูล</h1>
-    <form action="/auth/dologin" method="post">
+    <form action="/auth/doLogin" method="post">
         @if($errors->any())
             @foreach($errors->all() as $error)
 

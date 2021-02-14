@@ -1,17 +1,19 @@
 @extends('layout.master')
 @section('content')
 
-<h1>Post</h1>
-<a href="/post/create"> + add Post</a>
+<h1>ข่าว</h1>
+<a href="/post/create"> + เพิ่มข่าวใหม่</a>
 <table style="background-color: rgb(229, 190, 190); " >
     <thead  >
         <tr >
-            <td>ID</td>
-            <td>title</td>
-            <td>thumbnail</td>
-            <td>user_id</td>
-            <td>category_id</td>
-            <td>detail</td>
+            <td>ลำดับ</td>
+            <td>หัวข้อ</td>
+            <td>รูปประจำข่าว</td>
+            <td>หมวดหมู่ข่าว</td>
+            <td>ผู้เขียนข่าว</td>
+            <td>สร้างเมื่อ</td>
+            <td>ข้อมูล</td>
+            <td>จัดการ</td>
         </tr>
     </thead>
 
@@ -20,9 +22,10 @@
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->title}}</td>
-            <td>{{$item->thumbnail}}</td>
-            <td>{{$item->user_id}}</td>
-            <td>{{$item->category_id}}</td>
+            <td><img src="{{ storage_path($item->thumbnail) }}"></td>
+            <td>{{$item->category->name}}</td>
+            <td>{{$item->user->name}}</td>
+            <td>{{$item->created_at}}</td>
             <td>{{$item->detail}}</td>
             <td><a href="/post/edit/{{$item->id}}">แก้ไข</a> <a href="/post/delete/{{$item->id}}">ลบ</a></td>
         </tr>
